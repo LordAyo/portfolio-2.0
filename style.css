@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins/Poppins-Regular.ttf');
+}
+
+body {
+    font-family: Poppins;
+    background: #BAB86C;
+    padding: 90px 100px;
+}
+
+.entire-container {
+    border-radius: 30px;
+    border-top: 3px solid #000;
+    border-right: 6px solid #000;
+    border-bottom: 3px solid #000;
+    border-left: 3px solid #000;
+    background: #EBEBE8;
+    padding: 0px 80px;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+}
+
+header ul {
+    display: flex;
+    gap: 28px;
+}
+
+header a {
+    color: #31352E;
+    list-style: none;
+    text-decoration: none;
+    color: #31352E;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Main */
+
+.Home h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #31352E;
+    font-family: Poppins;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Home h1 {
+    font-size: 80px;
+}
+
+.Home h2 {
+    color: #31352E;
+    font-family: Poppins;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Home p {
+    color: rgba(49, 53, 46, 0.70);
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 99%;
+    margin-bottom: 50px;
+}
+
+.primary-button {
+    display: inline-flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 3px solid #31352E;
+    background: #BAB86C;
+    margin-right: 30px;
+}
+
+.primary-button a{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.secondary-button {
+    display: inline-flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 3px solid #31352E;
+}
+
+.secondary-button a{
+    font-size: 25px;
+    color: #31352E;
+    font-weight: 700;
+    text-decoration: none;
+}
