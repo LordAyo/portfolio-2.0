@@ -33,6 +33,12 @@ header {
     padding: 60px 0px 40px 0px;
 }
 
+header img {
+    opacity: 0; 
+    animation: fadeInDown 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
 header ul {
     display: flex;
     gap: 28px;
@@ -43,8 +49,25 @@ header a {
     list-style: none;
     text-decoration: none;
     font-size: 1em;
-    font-style: normal;
     font-weight: 900;
+    opacity: 0;
+    animation: fadeInDown 2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+header a:hover {
+    color: #BAB86C;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Home */
