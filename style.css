@@ -201,6 +201,16 @@ nav a:hover::before {
     cursor: pointer;
 }
 
+.primary-button:active {
+    background-color: #AFA336;
+    transform: scale(0.98); 
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.primary-button:active a {
+    color: #31352E; 
+}
+
 .primary-button a {
     font-size: 1.5625em;
     color: #fff;
@@ -244,6 +254,16 @@ nav a:hover::before {
     color: #31352E;
     font-weight: 700;
     text-decoration: none;
+}
+
+.secondary-button:active {
+    background-color: #1A1A1A; 
+    transform: scale(0.98); 
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.secondary-button:active a {
+    color: #fff;
 }
 
 .secondary-button:hover {
