@@ -16,6 +16,10 @@ body {
     padding: 90px 100px;
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
 .entire-container {
     border-radius: 30px;
     border-top: 3px solid #000;
@@ -34,7 +38,7 @@ header {
 }
 
 header img {
-    opacity: 0; 
+    opacity: 0;
     animation: fadeInDown 1.5s ease-out forwards;
     animation-delay: 0.3s;
 }
@@ -55,8 +59,19 @@ header a {
     animation-delay: 0.3s;
 }
 
-header a:hover {
-    color: #BAB86C;
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #31352E;
+    transition: width 0.4s ease-out;
+}
+
+nav a:hover::before {
+    width: 100%;
 }
 
 @keyframes fadeInDown {
@@ -64,6 +79,7 @@ header a:hover {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -71,6 +87,25 @@ header a:hover {
 }
 
 /* Home */
+.Home {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .header {
     font-size: 5em;
     text-align: center;
@@ -96,6 +131,26 @@ header a:hover {
     }
 }
 
+/* Header Animation */
+.header2, .header3 {
+    opacity: 0;
+    transform: translateX(-100px); 
+    animation: slideIn 1.2s ease-out forwards;
+    animation-delay: 0.3s; 
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 
 .content {
     display: flex;
@@ -106,7 +161,7 @@ header a:hover {
 .header2 {
     color: #31352E;
     font-family: poppins;
-    font-size: 4em;
+    font-size: 5em;
     font-style: normal;
     font-weight: 700;
     line-height: 1;
@@ -128,7 +183,9 @@ header a:hover {
     font-size: 2.5em;
     font-style: normal;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 600px;
 }
 
 .primary-button {
@@ -140,6 +197,8 @@ header a:hover {
     border: 3px solid #31352E;
     background: #BAB86C;
     margin-right: 30px;
+    transition: background-color 0.4s linear;
+    cursor: pointer;
 }
 
 .primary-button a {
@@ -149,6 +208,25 @@ header a:hover {
     text-decoration: none;
 }
 
+.primary-button:hover {
+    animation: bounce 0.4s ease-in-out;
+    background: #F6F954;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.primary-button:hover a {
+    color: #31352E;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
 .secondary-button {
     display: inline-flex;
     padding: 20px 40px;
@@ -156,19 +234,38 @@ header a:hover {
     align-items: center;
     border-radius: 40px;
     border: 3px solid #31352E;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.4s linear;
 }
 
 .secondary-button a {
     font-size: 1.5625em;
-    /* 25px converted */
     color: #31352E;
     font-weight: 700;
     text-decoration: none;
 }
 
+.secondary-button:hover {
+    background-color: #31352E;
+    animation: bounce 0.4s ease-in-out;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 8px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.secondary-button:hover a {
+    color: #fff;
+}
+
 .profile-img {
-    width: 357px;
     height: 405px;
+}
+
+.profile-img {
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1); 
 }
 
 /* About */
@@ -306,7 +403,7 @@ header a:hover {
 .contact-section {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .contact-section img {
