@@ -18,15 +18,9 @@
 
             <nav>
                 <ul>
-                    <a href="#about">
-                        <li>About</li>
-                    </a>
-                    <a href="#projects">
-                        <li>Projects</li>
-                    </a>
-                    <a href="#contact">
-                        <li>Contact</li>
-                    </a>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -35,7 +29,7 @@
         <main>
 
             <!-- Home -->
-            <section class="Home">
+            <section id="home" class="home">
                 <h1 class="header">&lt;Home/&gt;</h1>
 
                 <div class="content">
@@ -44,12 +38,12 @@
                         <h2 class="header3">I'm Ayomide</h2>
                         <p>Front end web developer and designer from Nigeria 🇳🇬</p>
 
-                        <button class="primary-button button"><a href="#contact">Lets Chat</a></button>
-                        <button class="secondary-button"><a href="./cv.pdf" download="Ayomide's CV">Download
-                                CV</a></button>
+                        <a href="#contact" class="primary-button button" aria-label="Contact me via the form">Let's Chat</a>
+                        <a href="./cv.pdf" download="Ayomide's CV" class="secondary-button" aria-label="Download my CV">Download CV</a>
+
                     </div>
 
-                    <img class="profile-img" src="./images/profile.png" alt="My face">
+                    <img class="profile-img" src="./images/profile.png" alt="Profile picture of Ayomide">
                 </div>
             </section>
 
@@ -62,12 +56,12 @@
                     abilities. Seeking an innovative organisation to help me continue my growth and development.</p>
 
                 <div class="about-content">
-                    <img class="offer-img" src="./images/Subtract.svg" alt="">
+                    <img class="offer-img" src="./images/Subtract.svg" alt="what i offer image">
 
                     <div class="about-cards">
                         <div class="card">
                             <div class="card-img">
-                                <img class="icon" src="./images/paintkit.png" alt="">
+                                <img class="icon" src="./images/paintkit.png" alt="paintkit image">
                             </div>
 
                             <div class="card-text">
@@ -79,7 +73,7 @@
 
                         <div class="card">
                             <div class="card-img">
-                                <img class="icon" src="./images/wallet.png" alt="">
+                                <img class="icon" src="./images/wallet.png" alt="wallet image">
                             </div>
 
                             <div class="card-text">
@@ -91,7 +85,7 @@
 
                         <div class="card">
                             <div class="card-img">
-                                <img class="icon" src="./images/chatt.png" alt="">
+                                <img class="icon" src="./images/chatt.png" alt="chat image">
                             </div>
 
                             <div class="card-text">
@@ -124,19 +118,19 @@
                 <h4>Feel free to contact me below or email me at ayozzabioye@gmail.com</h4>
 
                 <div class="contact-section">
-                    <img src="./images/call.png" alt=".call image">
+                    <img src="./images/call.png" alt="Phone call image">
 
                     <div class="contactinfo">
                         <form action="https://formsubmit.co/ayozzabioye@gmail.com" method="POST">
-                            <input id="cinput1" type="text" name="Name" placeholder="Name" required>
+                            <input class="cinput1" type="text" name="Name" placeholder="Name" required aria-label="Enter your name">
                             <br>
-                            <input id="cinput1" type="email" name="Email" placeholder="Email" required>
+                            <input class="cinput1" type="email" name="Email" placeholder="Email" required aria-label="Enter your email address">
                             <br>
-                            <textarea id="cinput2" placeholder="Message" name="Message" maxlength="500"
-                                required></textarea>
+                            <textarea class="cinput2" placeholder="Message" name="Message" maxlength="500"
+                                required aria-label="Enter your message"></textarea>
                             <br>
                             <div class="wrappersub">
-                                <button id="submit" type="submit">Send</button>
+                                <button id="submit" type="submit" aria-label="Send message">Send</button>
                             </div>
                         </form>
                     </div>

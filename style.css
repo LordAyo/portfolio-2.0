@@ -4,13 +4,8 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'poppins';
-    src: url('./poppins/poppins-Regular.ttf');
-}
-
 body {
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     background: #BAB86C;
     padding: 90px 100px;
@@ -30,6 +25,10 @@ body::-webkit-scrollbar {
     padding: 0px 80px;
 }
 
+.entire-container:hover{
+    animation: bounce 0.5s ease-in-out;
+}
+
 /* Header */
 header {
     display: flex;
@@ -46,14 +45,17 @@ header img {
 header ul {
     display: flex;
     gap: 28px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 header a {
     color: #31352E;
-    list-style: none;
     text-decoration: none;
     font-size: 1em;
     font-weight: 900;
+    position: relative;
     opacity: 0;
     animation: fadeInDown 2s ease-out forwards;
     animation-delay: 0.3s;
@@ -87,7 +89,7 @@ nav a:hover::before {
 }
 
 /* Home */
-.Home {
+.home {
     opacity: 0;
     transform: translateY(50px);
     animation: fadeIn 1.5s ease-out forwards;
@@ -132,11 +134,12 @@ nav a:hover::before {
 }
 
 /* Header Animation */
-.header2, .header3 {
+.header2,
+.header3 {
     opacity: 0;
-    transform: translateX(-100px); 
+    transform: translateX(-100px);
     animation: slideIn 1.2s ease-out forwards;
-    animation-delay: 0.3s; 
+    animation-delay: 0.3s;
 }
 
 @keyframes slideIn {
@@ -144,6 +147,7 @@ nav a:hover::before {
         opacity: 0;
         transform: translateX(-100px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -160,7 +164,6 @@ nav a:hover::before {
 
 .header2 {
     color: #31352E;
-    font-family: poppins;
     font-size: 5em;
     font-style: normal;
     font-weight: 700;
@@ -169,7 +172,6 @@ nav a:hover::before {
 
 .header3 {
     color: transparent;
-    font-family: poppins;
     font-size: 4.375em;
     font-style: normal;
     font-weight: 700;
@@ -177,9 +179,8 @@ nav a:hover::before {
     line-height: 100%;
 }
 
-.Home p {
+.home p {
     color: rgba(49, 53, 46, 0.70);
-    font-family: poppins;
     font-size: 2.5em;
     font-style: normal;
     font-weight: 500;
@@ -188,6 +189,7 @@ nav a:hover::before {
     width: 600px;
 }
 
+/* Primary Button */
 .primary-button {
     display: inline-flex;
     padding: 20px 40px;
@@ -197,46 +199,28 @@ nav a:hover::before {
     border: 3px solid #31352E;
     background: #BAB86C;
     margin-right: 30px;
-    transition: background-color 0.4s linear;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5625em;
+    color: #fff;
+    font-weight: 700;
+    transition: background-color 0.4s linear, color 0.4s linear, box-shadow 0.4s linear;
 }
 
 .primary-button:active {
     background-color: #AFA336;
-    transform: scale(0.98); 
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2); 
-}
-
-.primary-button:active a {
-    color: #31352E; 
-}
-
-.primary-button a {
-    font-size: 1.5625em;
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
+    transform: scale(0.98);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .primary-button:hover {
-    animation: bounce 0.4s ease-in-out;
-    background: #F6F954;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-}
-
-.primary-button:hover a {
+    background-color: #F6F954;
     color: #31352E;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25 inset);
+    animation: bounce 0.4s ease-in-out;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
+/* Secondary Button */
 .secondary-button {
     display: inline-flex;
     padding: 20px 40px;
@@ -244,48 +228,49 @@ nav a:hover::before {
     align-items: center;
     border-radius: 40px;
     border: 3px solid #31352E;
-    transition: all 0.3s ease;
     cursor: pointer;
-    transition: background-color 0.4s linear;
-}
-
-.secondary-button a {
+    background-color: transparent;
+    text-decoration: none;
     font-size: 1.5625em;
     color: #31352E;
     font-weight: 700;
-    text-decoration: none;
+    transition: background-color 0.4s linear, color 0.4s linear, box-shadow 0.4s linear; 
 }
 
 .secondary-button:active {
-    background-color: #1A1A1A; 
-    transform: scale(0.98); 
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3); 
-}
-
-.secondary-button:active a {
+    background-color: #1A1A1A;
+    transform: scale(0.98);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
     color: #fff;
 }
 
 .secondary-button:hover {
     background-color: #31352E;
-    animation: bounce 0.4s ease-in-out;
+    color: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 8px 0px rgba(0, 0, 0, 0.25) inset;
+    animation: bounce 0.4s ease-in-out;
 }
 
-.secondary-button:hover a {
-    color: #fff;
+/* Bounce Animation */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 .profile-img {
     height: 405px;
-}
-
-.profile-img {
     transition: transform 0.3s ease;
 }
 
 .profile-img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 /* About */
@@ -297,7 +282,6 @@ nav a:hover::before {
     color: #696C66;
     font-size: 1.25em;
     text-align: center;
-    font-family: poppins;
     font-style: normal;
     font-weight: 700;
 }
@@ -305,7 +289,6 @@ nav a:hover::before {
 .about .para {
     color: #696C66;
     text-align: center;
-    font-family: poppins;
     font-size: 1.125em;
     font-style: normal;
     font-weight: 400;
@@ -355,7 +338,6 @@ nav a:hover::before {
 
 .card h5 {
     color: #31352E;
-    font-family: Poppins;
     font-size: 1.875em;
     font-style: normal;
     font-weight: 500;
@@ -364,7 +346,6 @@ nav a:hover::before {
 
 .card p {
     color: rgba(105, 108, 102, 0.70);
-    font-family: Poppins;
     font-size: 1em;
     width: 311px;
     font-style: normal;
@@ -383,7 +364,6 @@ nav a:hover::before {
 .projects h4 {
     color: #696C66;
     text-align: center;
-    font-family: poppins;
     font-size: 1.25em;
     font-style: normal;
     font-weight: 700;
@@ -431,8 +411,8 @@ nav a:hover::before {
     height: 600px;
 }
 
-#cinput1,
-#cinput2 {
+.cinput1,
+.cinput2 {
     border: 1px solid #808080;
     background-color: transparent;
     font-weight: 700;
@@ -440,27 +420,27 @@ nav a:hover::before {
     border-radius: 10px;
 }
 
-#cinput1 {
+.cinput1 {
     padding: 30px 0px 29px 25px;
     width: 500px;
     height: 81px;
     margin-bottom: 15px;
 }
 
-#cinput1::placeholder {
+.cinput1::placeholder {
     color: #808080;
 }
 
-#cinput1:hover {
+.cinput1:hover {
     border-color: #037447;
     cursor: pointer;
 }
 
-#cinput1:hover::placeholder {
+.cinput1:hover::placeholder {
     color: #31352E;
 }
 
-#cinput2 {
+.cinput2 {
     padding: 30px 0px 100px 25px;
     width: 500px;
     height: 200px;
@@ -469,21 +449,25 @@ nav a:hover::before {
     color: #31352E;
 }
 
-#cinput2::placeholder {
+.cinput2::placeholder {
     color: #808080;
 }
 
-#cinput2:hover {
+.cinput2:hover {
     border-color: #037447;
     cursor: pointer;
 }
 
-#cinput2:hover::placeholder {
+.cinput2:hover::placeholder {
     color: #31352E;
 }
 
 textarea::-webkit-scrollbar {
     width: 0px;
+}
+
+textarea {
+    scrollbar-width: none;
 }
 
 .wrappersub {
