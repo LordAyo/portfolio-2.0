@@ -411,13 +411,19 @@ nav a:hover::before {
     height: 600px;
 }
 
+.contact-section img:hover{
+    animation: bounce 0.4s ease-in-out;
+}
+
 .cinput1,
 .cinput2 {
     border: 1px solid #808080;
     background-color: transparent;
     font-weight: 700;
     color: #31352E;
+    font-weight: bold;
     border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
 }
 
 .cinput1 {
@@ -425,6 +431,7 @@ nav a:hover::before {
     width: 500px;
     height: 81px;
     margin-bottom: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
 }
 
 .cinput1::placeholder {
@@ -432,8 +439,9 @@ nav a:hover::before {
 }
 
 .cinput1:hover {
-    border-color: #037447;
+    border: 2px solid #31352E;
     cursor: pointer;
+    animation: bounce 0.5s ease-in-out;
 }
 
 .cinput1:hover::placeholder {
@@ -447,6 +455,7 @@ nav a:hover::before {
     resize: none;
     background-color: transparent;
     color: #31352E;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
 }
 
 .cinput2::placeholder {
@@ -454,8 +463,9 @@ nav a:hover::before {
 }
 
 .cinput2:hover {
-    border-color: #037447;
+    border: 2px solid #31352E;
     cursor: pointer;
+    animation: bounce 0.5s ease-in-out;
 }
 
 .cinput2:hover::placeholder {
@@ -479,7 +489,7 @@ textarea {
     border-radius: 30px;
     margin-top: 20px;
     padding: 15px 60px;
-    font-size: 1.56em;
+    font-size: 1.5625em;
     font-weight: 700;
     background-color: #BAB86C;
     text-align: center;
@@ -488,10 +498,10 @@ textarea {
 }
 
 #submit:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-    background-color: #037447;
-    color: #fff;
+    background-color: #F6F954;
+    color: #31352E;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25 inset);
+    animation: bounce 0.4s ease-in-out;
 }
 
 
@@ -503,7 +513,10 @@ textarea {
 
 hr {
     margin-top: 55px;
-    width: 100% !important;
+    /* width: 100% !important; */
+    position: relative;
+    left: -80px;
+    width: calc(100% + 160px);
 }
 
 .footer-content {
