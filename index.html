@@ -16,6 +16,9 @@
         <header>
             <img src="./images/aylogo.svg" alt="My logo">
 
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -30,7 +33,7 @@
 
             <!-- Home -->
             <section id="home" class="home">
-                <h1 class="header">&lt;Home/&gt;</h1>
+                <h1 class="headerh1">&lt;Home/&gt;</h1>
 
                 <div class="content">
                     <div class="left-side">
@@ -38,8 +41,12 @@
                         <h2 class="header3">I'm Ayomide</h2>
                         <p>Front end web developer and designer from Nigeria 🇳🇬</p>
 
-                        <a href="#contact" class="primary-button button" aria-label="Contact me via the form">Let's Chat</a>
-                        <a href="./cv.pdf" download="Ayomide's CV" class="secondary-button" aria-label="Download my CV">Download CV</a>
+                        <div class="header-buttons">
+                            <a href="#contact" class="primary-button button" aria-label="Contact me via the form">Let's
+                                Chat</a>
+                            <a href="./cv.pdf" download="Ayomide's CV" class="secondary-button"
+                                aria-label="Download my CV">Download CV</a>
+                        </div>
 
                     </div>
 
@@ -49,7 +56,7 @@
 
             <!-- About -->
             <section id="about" class="about">
-                <h1 class="header">&lt;About/&gt;</h1>
+                <h1 class="headerh1">&lt;About/&gt;</h1>
                 <h4>A computer scientist using his love for UI designing to ignite his passion for web development</h4>
                 <p class="para">Web developer with a Computer Science background who is fluent in HTML, CSS, and
                     JavaScript. Proven ability to oversee web development projects. Strong teamwork and communication
@@ -100,34 +107,58 @@
 
             <!-- Projects -->
             <section id="projects" class="projects">
-
-                <h1 class="header">&lt;Projects/&gt;</h1>
-                <h4>What i have been working on recently (a work in progress).</h4>
+                <h1 class="headerh1">&lt;Projects/&gt;</h1>
+                <h4>What I have been working on recently (a work in progress).</h4>
 
                 <div class="project-cards">
-                    <img src="./images/portfolio.jpeg" alt="portfolio">
-                    <img src="./images/brewbliss.jpeg" alt="brewbliss">
-                    <img src="./images/charity.jpeg" alt="charity">
-                </div>
+                    <div class="project-card">
+                        <img class="project-img" src="./images/portfolio.jpeg" alt="portfolio">
+                        <div class="overlay">
+                            <h3>Portfolio 1.0</h3>
+                            <p>A showcase of my journey as a front-end designer and developer.</p>
+                            <a href="#" class="overlay-button">Visit</a>
+                        </div>
+                    </div>
 
+                    <div class="project-card">
+                        <img class="project-img" src="./images/brewbliss.jpeg" alt="brewbliss">
+                        <div class="overlay">
+                            <h3>BrewBliss</h3>
+                            <p>A website dedicated to coffee enthusiasts, where brewing meets passion.</p>
+                            <a href="#" class="overlay-button">Visit</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img class="project-img" src="./images/charity.jpeg" alt="charity">
+                        <div class="overlay">
+                            <h3>Charity Connect</h3>
+                            <p>A platform designed to connect donors with charitable causes.</p>
+                            <a href="#" class="overlay-button">Visit</a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
 
+
             <section id="contact" class="contact">
-                <h1 class="header">&lt;Contact/&gt;</h1>
-                <h4>Feel free to contact me below or email me at ayozzabioye@gmail.com</h4>
+                <h1 class="headerh1">&lt;Contact/&gt;</h1>
+                <h4>Feel free to contact me below or email me at ayozzabioye@gmail.com</h4>
 
                 <div class="contact-section">
                     <img src="./images/call.png" alt="Phone call image">
 
                     <div class="contactinfo">
                         <form action="https://formsubmit.co/ayozzabioye@gmail.com" method="POST">
-                            <input class="cinput1" type="text" name="Name" placeholder="Name" required aria-label="Enter your name">
+                            <input class="cinput1" type="text" name="Name" placeholder="Name" required
+                                aria-label="Enter your name">
                             <br>
-                            <input class="cinput1" type="email" name="Email" placeholder="Email" required aria-label="Enter your email address">
+                            <input class="cinput1" type="email" name="Email" placeholder="Email" required
+                                aria-label="Enter your email address">
                             <br>
-                            <textarea class="cinput2" placeholder="Message" name="Message" maxlength="500"
-                                required aria-label="Enter your message"></textarea>
+                            <textarea class="cinput2" placeholder="Message" name="Message" maxlength="500" required
+                                aria-label="Enter your message"></textarea>
                             <br>
                             <div class="wrappersub">
                                 <button id="submit" type="submit" aria-label="Send message">Send</button>
