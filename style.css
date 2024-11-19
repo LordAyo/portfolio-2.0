@@ -69,7 +69,7 @@ header a {
 }
 
 .hamburger {
-    display: none; 
+    display: none;
     font-size: 2rem;
     cursor: pointer;
     color: #31352E;
@@ -633,7 +633,7 @@ hr {
 
     header ul {
         display: none;
-        flex-direction: column; 
+        flex-direction: column;
         gap: 10px;
         width: 100%;
         background-color: #EBEBE8;
@@ -645,7 +645,7 @@ hr {
         border-top: 1px solid #ccc;
     }
 
-    .menu-toggle:checked + .hamburger + nav ul {
+    .menu-toggle:checked+.hamburger+nav ul {
         display: flex;
     }
 
@@ -675,20 +675,20 @@ hr {
     }
 
     .profile-img {
-        height: 300px; 
+        height: 300px;
         width: auto;
         margin-top: 20px;
         margin-bottom: 20px;
     }
 
-    .left-side{
+    .left-side {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .headerh1 {
-        font-size: 3em; 
+        font-size: 3em;
     }
 
     .header2 {
@@ -707,17 +707,18 @@ hr {
         margin: 0;
     }
 
-    .header-buttons{
+    .header-buttons {
         display: flex;
         margin-top: 30px;
         margin-bottom: 90px;
         gap: 0px;
     }
 
-    .primary-button{
+    .primary-button {
         font-size: 1em;
         padding: 10px 30px;
     }
+
     .secondary-button {
         font-size: 1em;
         padding: 10px 20px;
@@ -726,66 +727,103 @@ hr {
 
 
     /* About Section */
-    .about {
-        margin-top: 30px; /* Less space between sections */
-    }
-
-    .about h4{
-        font-size: 1em;
-    }
-
-    .about .para{
-        font-size: 0.8em;
-    }
-
-    .offer-img {
-        display: none;
-    }
-
-    .icon{
-        width: 50px;
-        height: 50px;
-    }
-
     .about-cards {
         display: flex;
         flex-direction: column;
-        gap: 15px; 
+        gap: 20px;
+        padding: 10px;
+        width: 100%;
     }
 
-    .card{
-        display: flex;
+    .card {
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 15px;
         align-items: center;
+        border-radius: 20px;
+    }
+
+    .card-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-text {
+        display: flex;
         flex-direction: column;
-        padding: 15px 5px;
-        gap: 10px;
+        gap: 5px;
     }
 
     .card h5 {
-        text-align: center;
-        font-size: 1em; 
+        font-size: 1.2em;
+        text-align: left;
+        margin: 0;
     }
 
     .card p {
-        font-size: 0.6em;
-        text-align: center;
+        font-size: 0.9em;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        color: rgba(105, 108, 102, 0.90);
+        line-height: 1.4;
+    }
+
+    .about {
+        margin-top: 40px;
+        padding: 0 10px;
+    }
+
+    .offer-img{
+        display: none;
+    }
+
+    .about h4 {
+        font-size: 1.1em;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+
+    .about .para {
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
-    
     /* Projects Section */
-    .projects h4{
+    .projects{
+        margin-top: 110px;
+    }
+
+    .projects h4 {
         font-size: 1em;
     }
 
-    .project-cards{
+    .project-cards {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         gap: 15px;
         align-items: center;
     }
-    
-    .project-card{
+
+    .project-card {
         width: 100%;
         height: 400px;
         max-width: 350px;
@@ -798,71 +836,73 @@ hr {
     }
 
     .overlay {
-        padding: 15px; 
+        padding: 15px;
 
-    .overlay h3 {
-        font-size: 1.5em; 
-    }
+        .overlay h3 {
+            font-size: 1.5em;
+        }
 
-    .overlay p {
-        font-size: 1em;
-        margin-bottom: 15px;
-    }
+        .overlay p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
 
-    /* Contact Section */
-    .contact {
-        margin-top: 50px; 
-    }
+        /* Contact Section */
+        .contact {
+            margin-top: 50px;
+        }
 
-    .contact h4{
-        font-weight: 300;
-        font-size: 1em;
-    }
+        .contact h4 {
+            font-weight: 300;
+            font-size: 1em;
+        }
 
-    .contact-section {
-        flex-direction: column;
-    }
+        .contact-section {
+            flex-direction: column;
+        }
 
-    .contact-section img {
-        width: 150px; 
-        height: auto;
-        margin-bottom: 20px;
-    }
+        .contact-section img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
 
-    /* Form fields */
-    .cinput1, .cinput2 {
-        width: 300px;
-    }
+        /* Form fields */
+        .cinput1,
+        .cinput2 {
+            width: 300px;
+        }
 
-    #submit {
-        text-align: center;
-        width: 50%;
-        padding: 10px; 
-    }
+        #submit {
+            text-align: center;
+            width: 50%;
+            padding: 10px;
+        }
 
-    .wrappersub{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        .wrappersub {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* Footer adjustments */
-    footer {
-        padding: 100px 0px 20px 0px;
-    }
+        /* Footer adjustments */
+        footer {
+            padding: 100px 0px 20px 0px;
+        }
 
-    footer :first-child{
-        display: none;
-    }
+        footer :first-child {
+            display: none;
+        }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .footer-img {
-        width: 50px; 
-        height: 50px;
-        margin: 10px;
+        .footer-img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
     }
 }
