@@ -279,7 +279,6 @@ nav a:hover::before {
 }
 
 .profile-img {
-    width: 50%;
     height: 405px;
     transition: transform 0.3s ease;
 }
